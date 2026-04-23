@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mindex.challenge.ChallengeApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-23T02:35:43.928Z" hostname="LAPTOP-CV06CNUR" time="0.02">
+  <properties/>
+  <testcase name="contextLoads" classname="com.mindex.challenge.ChallengeApplicationTests" time="0.02"/>
+  <system-out><![CDATA[2026-04-22T22:35:40.986-04:00  INFO 19036 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.ChallengeApplicationTests]: ChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-22T22:35:41.011-04:00  INFO 19036 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.ChallengeApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.7)
+
+2026-04-22T22:35:41.165-04:00  INFO 19036 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Starting ChallengeApplicationTests using Java 25.0.2 with PID 19036 (started by 123de in C:\Users\123de\Downloads\mindex-code-challenge\mindex-code-challenge)
+2026-04-22T22:35:41.166-04:00 DEBUG 19036 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Running with Spring Boot v3.3.7, Spring v6.1.16
+2026-04-22T22:35:41.167-04:00  INFO 19036 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-04-22T22:35:41.687-04:00  INFO 19036 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-04-22T22:35:41.702-04:00  INFO 19036 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 MongoDB repository interfaces.
+2026-04-22T22:35:42.218-04:00  INFO 19036 --- [    Test worker] de.bwaldvogel.mongo.MongoServer          : started MongoServer(port: 61406, ssl: false)
+2026-04-22T22:35:42.231-04:00  INFO 19036 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/25.0.2+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@377dfb8d, com.mongodb.Jep395RecordCodecProvider@42a0786f, com.mongodb.KotlinCodecProvider@477523ba]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:61406], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-04-22T22:35:42.646-04:00  INFO 19036 --- [-server-worker1] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x05f2b4e0, L:/127.0.0.1:61406 - R:/127.0.0.1:61407] connected
+2026-04-22T22:35:42.722-04:00  INFO 19036 --- [127.0.0.1:61406] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:61406, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=410602500}
+2026-04-22T22:35:42.731-04:00  INFO 19036 --- [-server-worker2] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x9af643b8, L:/127.0.0.1:61406 - R:/127.0.0.1:61408] connected
+2026-04-22T22:35:43.065-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x0f1ff623, L:/127.0.0.1:61406 - R:/127.0.0.1:61409] connected
+2026-04-22T22:35:43.089-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoBackend   : created database test
+2026-04-22T22:35:43.093-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection employee
+2026-04-22T22:35:43.097-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.employee
+2026-04-22T22:35:43.820-04:00  INFO 19036 --- [    Test worker] c.m.challenge.ChallengeApplicationTests  : Started ChallengeApplicationTests in 2.792 seconds (process running for 27.294)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

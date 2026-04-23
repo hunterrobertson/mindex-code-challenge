@@ -73,7 +73,7 @@ public class ReportingStructureServiceImplTest {
     @Test
     public void testGenerateReportingStructureWithNoReports() {
         // George Harrison's ID - an employee with no direct reports
-        String employeeId = "3aa1cbe4-8801-11e8-9eb6-529269fb1459";
+        String employeeId = "c0c2293d-16bd-4603-8e08-638a9d18b22c";
 
         ReportingStructure reportingStructure = restTemplate.getForEntity(reportingStructureUrl, ReportingStructure.class, employeeId).getBody();
         
@@ -119,7 +119,7 @@ public class ReportingStructureServiceImplTest {
     @Test
     public void testGenerateReportingStructureSingleLevel() {
         // Ringo Starr's ID - has direct reports but they have no reports
-        String employeeId = "03aa1cbe-8801-11e8-9eb6-529269fb1459";
+        String employeeId = "03aa1462-ffa9-4978-901b-7c001562cf6f";
 
         ReportingStructure reportingStructure = restTemplate.getForEntity(reportingStructureUrl, ReportingStructure.class, employeeId).getBody();
         

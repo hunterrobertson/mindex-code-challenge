@@ -6,6 +6,8 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,10 +40,15 @@ public class CompensationController {
      *   reaching the service layer or database.
      */
     @PostMapping("/compensation")
-    public Compensation create(@Valid @RequestBody Compensation compensation) {
+    public ResponseEntity<Compensation> create(@Valid @RequestBody Compensation compensation) {
         LOG.debug("Received compensation create request for [{}]", compensation);
 
-        return compensationService.create(compensation);
+        Compensation createdCompensation = compensationService.create(compensation);
+        
+        // Enhancement: Return HTTP 201 Created for successful creation.
+        // This is REST best practice and more informative than 200 OK.
+        // It signals that a new resource has been created.
+        return new ResponseEntity<>(createdCompensation, HttpStatus.CREATED);
     }
 
     /**

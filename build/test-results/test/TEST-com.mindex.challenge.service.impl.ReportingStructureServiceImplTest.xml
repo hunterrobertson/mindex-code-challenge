@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-04-23T02:35:38.784Z" hostname="LAPTOP-CV06CNUR" time="2.192">
+  <properties/>
+  <testcase name="testGenerateReportingStructureInvalidEmployee" classname="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" time="1.976"/>
+  <testcase name="testGenerateReportingStructure" classname="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" time="0.145"/>
+  <testcase name="testGenerateReportingStructureWithNoReports" classname="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" time="0.027"/>
+  <testcase name="testGenerateReportingStructureSingleLevel" classname="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" time="0.035"/>
+  <system-out><![CDATA[22:35:19.655 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.ReportingStructureServiceImplTest]: ReportingStructureServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:35:20.021 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.ReportingStructureServiceImplTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.7)
+
+2026-04-22T22:35:21.245-04:00  INFO 19036 --- [    Test worker] .c.s.i.ReportingStructureServiceImplTest : Starting ReportingStructureServiceImplTest using Java 25.0.2 with PID 19036 (started by 123de in C:\Users\123de\Downloads\mindex-code-challenge\mindex-code-challenge)
+2026-04-22T22:35:21.251-04:00 DEBUG 19036 --- [    Test worker] .c.s.i.ReportingStructureServiceImplTest : Running with Spring Boot v3.3.7, Spring v6.1.16
+2026-04-22T22:35:21.254-04:00  INFO 19036 --- [    Test worker] .c.s.i.ReportingStructureServiceImplTest : No active profile set, falling back to 1 default profile: "default"
+2026-04-22T22:35:24.398-04:00  INFO 19036 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-04-22T22:35:24.487-04:00  INFO 19036 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 MongoDB repository interfaces.
+2026-04-22T22:35:30.842-04:00  INFO 19036 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-04-22T22:35:30.999-04:00  INFO 19036 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-22T22:35:31.001-04:00  INFO 19036 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-22T22:35:31.539-04:00  INFO 19036 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-22T22:35:31.541-04:00  INFO 19036 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10186 ms
+2026-04-22T22:35:33.088-04:00  INFO 19036 --- [    Test worker] de.bwaldvogel.mongo.MongoServer          : started MongoServer(port: 61399, ssl: false)
+2026-04-22T22:35:33.505-04:00  INFO 19036 --- [-server-worker1] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0xb1782599, L:/127.0.0.1:61399 - R:/127.0.0.1:61400] connected
+2026-04-22T22:35:33.523-04:00  INFO 19036 --- [-server-worker2] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x9b32ede6, L:/127.0.0.1:61399 - R:/127.0.0.1:61401] connected
+2026-04-22T22:35:33.527-04:00  INFO 19036 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/25.0.2+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@377dfb8d, com.mongodb.Jep395RecordCodecProvider@42a0786f, com.mongodb.KotlinCodecProvider@477523ba]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:61399], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-04-22T22:35:33.842-04:00  INFO 19036 --- [127.0.0.1:61399] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:61399, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=273120100}
+2026-04-22T22:35:36.193-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.wire.MongoWireProtocolHandler  : client [id: 0x87a6f518, L:/127.0.0.1:61399 - R:/127.0.0.1:61402] connected
+2026-04-22T22:35:36.252-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoBackend   : created database test
+2026-04-22T22:35:36.332-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection employee
+2026-04-22T22:35:36.350-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.employee
+2026-04-22T22:35:38.716-04:00  INFO 19036 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 61403 (http) with context path '/'
+2026-04-22T22:35:38.757-04:00  INFO 19036 --- [    Test worker] .c.s.i.ReportingStructureServiceImplTest : Started ReportingStructureServiceImplTest in 18.361 seconds (process running for 22.23)
+2026-04-22T22:35:40.348-04:00  INFO 19036 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-22T22:35:40.352-04:00  INFO 19036 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-22T22:35:40.356-04:00  INFO 19036 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-04-22T22:35:40.566-04:00 DEBUG 19036 --- [o-auto-1-exec-1] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [invalid-employee-id-that-does-not-exist]
+2026-04-22T22:35:40.568-04:00 DEBUG 19036 --- [o-auto-1-exec-1] c.m.c.s.i.ReportingStructureServiceImpl  : Generating reporting structure for employeeId [invalid-employee-id-that-does-not-exist]
+2026-04-22T22:35:40.570-04:00  INFO 19036 --- [o-auto-1-exec-1] c.m.c.service.impl.EmployeeServiceImpl   : Starting to create reporting structure for employee with id [invalid-employee-id-that-does-not-exist]
+2026-04-22T22:35:40.571-04:00 DEBUG 19036 --- [o-auto-1-exec-1] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [invalid-employee-id-that-does-not-exist]
+2026-04-22T22:35:40.679-04:00  WARN 19036 --- [o-auto-1-exec-1] c.m.c.service.impl.EmployeeServiceImpl   : Employee not found with id: invalid-employee-id-that-does-not-exist
+2026-04-22T22:35:40.686-04:00 ERROR 19036 --- [o-auto-1-exec-1] c.m.c.controller.GlobalExceptionHandler  : Employee not found: Invalid employeeId: invalid-employee-id-that-does-not-exist
+2026-04-22T22:35:40.781-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.783-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.s.i.ReportingStructureServiceImpl  : Generating reporting structure for employeeId [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.787-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Starting to create reporting structure for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.791-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.856-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Successfully read employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.856-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Starting to count reports for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.856-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [b7839309-3348-463b-a7e3-5de1c168beb3]
+2026-04-22T22:35:40.863-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.869-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [62c1084e-6e34-4630-93fd-9153afb65309]
+2026-04-22T22:35:40.876-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.882-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Successfully counted [4] reports for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.883-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Successfully created reporting structure for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:40.920-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.920-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.s.i.ReportingStructureServiceImpl  : Generating reporting structure for employeeId [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.920-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Starting to create reporting structure for employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.920-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.932-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully read employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.932-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c] has no direct reports.
+2026-04-22T22:35:40.933-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully counted [0] reports for employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.933-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully created reporting structure for employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.955-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.955-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.s.i.ReportingStructureServiceImpl  : Generating reporting structure for employeeId [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.956-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Starting to create reporting structure for employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.956-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.962-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully read employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.962-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Starting to count reports for employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.962-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [62c1084e-6e34-4630-93fd-9153afb65309]
+2026-04-22T22:35:40.967-04:00 DEBUG 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [c0c2293d-16bd-4603-8e08-638a9d18b22c]
+2026-04-22T22:35:40.971-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully counted [2] reports for employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+2026-04-22T22:35:40.971-04:00  INFO 19036 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Successfully created reporting structure for employee with id [03aa1462-ffa9-4978-901b-7c001562cf6f]
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\123de\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

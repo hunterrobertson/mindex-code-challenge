@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CompensationServiceImplTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CompensationServiceImplTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mindex.challenge.service.impl.html">com.mindex.challenge.service.impl</a> &gt; CompensationServiceImplTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">11</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.903s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateCompensationEmptyEffectiveDate</td>
+<td class="success">0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationInvalidDateFormat</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationInvalidEmployee</td>
+<td class="success">0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationNegativeSalary</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationNullEffectiveDate</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationNullEmployee</td>
+<td class="success">0.254s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationValidDateFormat</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateCompensationZeroSalary</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateRead</td>
+<td class="success">0.127s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMultipleCompensationRecordsMostRecent</td>
+<td class="success">0.221s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testReadCompensationNonExistent</td>
+<td class="success">0.101s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2026-04-22T22:35:44.062-04:00  INFO 19036 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.CompensationServiceImplTest]: CompensationServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-22T22:35:44.069-04:00  INFO 19036 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.CompensationServiceImplTest
+2026-04-22T22:35:44.320-04:00 ERROR 19036 --- [o-auto-1-exec-4] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation): [Field error in object 'compensation' on field 'employee': rejected value [null]; codes [NotNull.compensation.employee,NotNull.employee,NotNull.com.mindex.challenge.data.Employee,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.employee,employee]; arguments []; default message [employee]]; default message [Employee cannot be null]] 
+2026-04-22T22:35:44.350-04:00 DEBUG 19036 --- [o-auto-1-exec-4] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@36f02247]
+2026-04-22T22:35:44.351-04:00 DEBUG 19036 --- [o-auto-1-exec-4] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@36f02247]
+2026-04-22T22:35:44.352-04:00 DEBUG 19036 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [non-existent-employee-id]
+2026-04-22T22:35:44.360-04:00  WARN 19036 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Employee not found with id: non-existent-employee-id
+2026-04-22T22:35:44.362-04:00 ERROR 19036 --- [o-auto-1-exec-4] c.m.c.controller.GlobalExceptionHandler  : Employee not found: Invalid employeeId: non-existent-employee-id
+2026-04-22T22:35:44.383-04:00 ERROR 19036 --- [o-auto-1-exec-4] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation): [Field error in object 'compensation' on field 'effectiveDate': rejected value [04/19/2026]; codes [Pattern.compensation.effectiveDate,Pattern.effectiveDate,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.effectiveDate,effectiveDate]; arguments []; default message [effectiveDate],[Ljakarta.validation.constraints.Pattern$Flag;@12aaed64,\d{4}-\d{2}-\d{2}]; default message [Effective date must be in ISO-8601 format (YYYY-MM-DD)]] 
+2026-04-22T22:35:44.409-04:00 DEBUG 19036 --- [o-auto-1-exec-6] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@3a844878]
+2026-04-22T22:35:44.409-04:00 DEBUG 19036 --- [o-auto-1-exec-6] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@3a844878]
+2026-04-22T22:35:44.409-04:00 DEBUG 19036 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.431-04:00  INFO 19036 --- [o-auto-1-exec-6] c.m.c.s.impl.CompensationServiceImpl     : Compensation created successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.450-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : adding unique _id index for collection compensation
+2026-04-22T22:35:44.452-04:00  INFO 19036 --- [-server-worker3] d.b.mongo.backend.AbstractMongoDatabase  : created collection test.compensation
+2026-04-22T22:35:44.478-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@5100d01c]
+2026-04-22T22:35:44.478-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@5100d01c]
+2026-04-22T22:35:44.478-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.491-04:00  INFO 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Compensation created successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.513-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.controller.CompensationController  : Received compensation read request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.514-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Reading compensation for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.543-04:00  INFO 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Compensation retrieved successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.646-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@d15d04d]
+2026-04-22T22:35:44.648-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@d15d04d]
+2026-04-22T22:35:44.649-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.661-04:00  INFO 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Compensation created successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.692-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.controller.CompensationController  : Received compensation read request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.693-04:00 DEBUG 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Reading compensation for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.738-04:00  INFO 19036 --- [o-auto-1-exec-7] c.m.c.s.impl.CompensationServiceImpl     : Compensation retrieved successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.763-04:00 ERROR 19036 --- [o-auto-1-exec-8] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation): [Field error in object 'compensation' on field 'salary': rejected value [-50000.0]; codes [Positive.compensation.salary,Positive.salary,Positive.double,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.salary,salary]; arguments []; default message [salary]]; default message [Salary must be a positive value]] 
+2026-04-22T22:35:44.788-04:00 DEBUG 19036 --- [o-auto-1-exec-8] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@195a98db]
+2026-04-22T22:35:44.788-04:00 DEBUG 19036 --- [o-auto-1-exec-8] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@195a98db]
+2026-04-22T22:35:44.790-04:00 DEBUG 19036 --- [o-auto-1-exec-8] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.800-04:00  INFO 19036 --- [o-auto-1-exec-8] c.m.c.s.impl.CompensationServiceImpl     : Compensation created successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.845-04:00 ERROR 19036 --- [-auto-1-exec-10] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation): [Field error in object 'compensation' on field 'salary': rejected value [0.0]; codes [Positive.compensation.salary,Positive.salary,Positive.double,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.salary,salary]; arguments []; default message [salary]]; default message [Salary must be a positive value]] 
+2026-04-22T22:35:44.873-04:00 ERROR 19036 --- [-auto-1-exec-10] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation) with 2 errors: [Field error in object 'compensation' on field 'effectiveDate': rejected value [   ]; codes [NotBlank.compensation.effectiveDate,NotBlank.effectiveDate,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.effectiveDate,effectiveDate]; arguments []; default message [effectiveDate]]; default message [Effective date cannot be blank]] [Field error in object 'compensation' on field 'effectiveDate': rejected value [   ]; codes [Pattern.compensation.effectiveDate,Pattern.effectiveDate,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.effectiveDate,effectiveDate]; arguments []; default message [effectiveDate],[Ljakarta.validation.constraints.Pattern$Flag;@12aaed64,\d{4}-\d{2}-\d{2}]; default message [Effective date must be in ISO-8601 format (YYYY-MM-DD)]] 
+2026-04-22T22:35:44.904-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.controller.CompensationController  : Received compensation create request for [com.mindex.challenge.data.Compensation@2df531a3]
+2026-04-22T22:35:44.904-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : Creating compensation [com.mindex.challenge.data.Compensation@2df531a3]
+2026-04-22T22:35:44.904-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.914-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : Compensation created successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.936-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.controller.CompensationController  : Received compensation read request for id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.936-04:00 DEBUG 19036 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : Reading compensation for employee with id [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.972-04:00  INFO 19036 --- [o-auto-1-exec-2] c.m.c.s.impl.CompensationServiceImpl     : Compensation retrieved successfully for employee [16a596ae-edd3-4847-99fe-c4518e82c86f]
+2026-04-22T22:35:44.997-04:00 ERROR 19036 --- [o-auto-1-exec-3] c.m.c.controller.GlobalExceptionHandler  : Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;com.mindex.challenge.data.Compensation&gt; com.mindex.challenge.controller.CompensationController.create(com.mindex.challenge.data.Compensation): [Field error in object 'compensation' on field 'effectiveDate': rejected value [null]; codes [NotBlank.compensation.effectiveDate,NotBlank.effectiveDate,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [compensation.effectiveDate,effectiveDate]; arguments []; default message [effectiveDate]]; default message [Effective date cannot be blank]] 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.1</a> at Apr 22, 2026, 10:35:45 PM</p>
+</div>
+</div>
+</body>
+</html>

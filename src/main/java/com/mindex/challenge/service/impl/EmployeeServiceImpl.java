@@ -84,35 +84,24 @@ public class EmployeeServiceImpl implements EmployeeService {
         int count = 0;
         LOG.debug("Starting to count reports for employee with id [{}]", employee.getEmployeeId());
 
-        // Optimization: I'm using a breadth-first search (BFS) approach with a Set to track
-        // already-processed employee IDs. This prevents infinite loops if there are circular
-        // references in the organizational hierarchy (which shouldn't happen, but it's defensive).
-        // More importantly, the Set ensures we don't double-count the same employee.
-        //
-        // Originally, the ReportingStructureServiceImpl used recursion with repeated calls to
-        // employeeService.read(), which could cause the N+1 query problem. This approach is better
-        // because it processes all reports level-by-level and tracks which employees we've seen.
-        List<Employee> reportsToProcess = new ArrayList<>(employee.getDirectReports());
+        List<Employee> reportsToProcess = new ArrayList<>();
+        for (Employee directReport : employee.getDirectReports()) {
+            reportsToProcess.add(read(directReport.getEmployeeId()));
+        }
+
         Set<String> processedEmployeeIds = new HashSet<>();
 
         while (!reportsToProcess.isEmpty()) {
             Employee currentReport = reportsToProcess.remove(0);
-            LOG.debug("Processing report with id [{}]", currentReport.getEmployeeId());
-
-            // Fetch the full employee object to get their direct reports
-            Employee fullReport = read(currentReport.getEmployeeId());
-
-            if (fullReport != null && processedEmployeeIds.add(fullReport.getEmployeeId())) {
+            if (processedEmployeeIds.add(currentReport.getEmployeeId())) {
                 count++;
-                LOG.debug("Incremented report count to [{}]", count);
-                if (fullReport.getDirectReports() != null) {
-                    reportsToProcess.addAll(fullReport.getDirectReports());
-                    LOG.debug("Added [{}] new reports to process.", fullReport.getDirectReports().size());
+                if (currentReport.getDirectReports() != null) {
+                    for (Employee report : currentReport.getDirectReports()) {
+                        reportsToProcess.add(read(report.getEmployeeId()));
+                    }
                 }
             }
         }
-
-        LOG.debug("Finished counting reports for employee with id [{}]. Total count: [{}]", employee.getEmployeeId(), count);
         return count;
     }
 }
